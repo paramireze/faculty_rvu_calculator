@@ -10,4 +10,9 @@ docker-compose run web rails new . --force --no-deps --database=postgresql
 ## Docker commands
 ``` 
 docker-compose build
+docker-compose up
+docker-compose run web rake db:create
+docker-compose up --build
+docker-compose run web bundle install
 ```
+
