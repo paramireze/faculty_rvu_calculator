@@ -1,24 +1,13 @@
-# README
+# README, or read not me, that is the question 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+docker-compose rails tutorial: https://docs.docker.com/compose/rails/
 
-Things you may want to cover:
+## Build the project
+``` 
+docker-compose run web rails new . --force --no-deps --database=postgresql
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Docker commands
+``` 
+docker-compose build
+```
