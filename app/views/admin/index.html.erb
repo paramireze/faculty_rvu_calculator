@@ -4,6 +4,21 @@
       <div class="col-lg-8 col-md-7 col-sm-6">
         <h1><%= @heading %></h1>
         <div><%= @body %></div>
+
+        <h2>Users</h2>
+        <table class="table">
+          <% @users.each do | user| %>
+            <tr>
+              <td><%= user.first_name %> <%= user.last_name %></td>
+              <td>
+                <% user.roles.each do | role | %>
+                  <%= role.name %>
+                <% end %><br/>
+              </td>
+            </tr>
+          <% end %>
+        </table>
+
       </div>
     </div>
   </div>
