@@ -18,7 +18,20 @@
             </tr>
           <% end %>
         </table>
+        <hr />
+        <h2>Search Feature</h2>
+        <%=  @paul.inspect %>
+        <div>
+          <%= form_tag("/search", method: "post") do %>
+            <%= text_field(:paul, :first_name) %>
+            <%= text_field(:paul, :last_name) %>
+            <%= text_field(:paul, :user_name) %>
+            <%= text_field(:paul, :email) %>
 
+          <% end %>
+
+        </div>
+        <hr />
       </div>
     </div>
   </div>
