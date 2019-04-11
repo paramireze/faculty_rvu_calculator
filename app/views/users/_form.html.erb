@@ -5,13 +5,49 @@
 
       <ul>
       <% user.errors.full_messages.each do |message| %>
+
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
+    <fieldset>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-3 col-form-label">First Name:</label>
+        <div class="col-sm-9">
+          <%= form.text_field :first_name, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-3 col-form-label">Last Name:</label>
+        <div class="col-sm-9">
+          <%= form.text_field :last_name, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="email" class="col-sm-3 col-form-label">Email</label>
+        <div class="col-sm-9">
+          <%= form.text_field :email, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-3 col-form-label">User Name</label>
+        <div class="col-sm-9">
+          <%= form.text_field :user_name, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-3 col-form-label">Roles</label>
+        <div class="col-sm-9">
+          <%= collection_check_boxes(:user, :role_ids, roles.all, :id, :name) %>
+        </div>
+      </div>
 
+    </fieldset>
+  <br />
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Submit', :class => 'btn btn-primary' %>
   </div>
+  <br />
 <% end %>
+
