@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+    @roles = Role.all
   end
 
   # GET /users/1/edit
