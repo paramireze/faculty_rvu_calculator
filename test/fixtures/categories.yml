@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  parent_category_id: 1
+  lvl: 1
+  lft: 1
+  rgt: 1
+  retired: 2019-04-14
+
+two:
+  name: MyString
+  description: MyString
+  parent_category_id: 1
+  lvl: 1
+  lft: 1
+  rgt: 1
+  retired: 2019-04-14
