@@ -12,3 +12,7 @@ delegate = Role.create(name: 'Delegate')
 faculty = Role.create(name: 'Faculty')
 
 paul = User.create(first_name: 'paul', last_name: 'ramirez', user_name: 'per245', email: 'pramirez@uwhealth.org', roles: [admin, reviewer])
+
+research_category = Category.create(name: 'Research', lvl:0)
+abstract_category = Category.create(name: 'Abstracts', lvl:1, parent_category: research_category)
+abstract_category = Category.create(name: 'Published Peer-Reviewed Manuscripts', lvl:1, parent_category: research_category)
