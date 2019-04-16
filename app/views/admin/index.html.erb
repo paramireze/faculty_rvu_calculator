@@ -18,26 +18,21 @@
             </tr>
           <% end %>
         </table>
-        <hr />
-        <h2>Search Feature</h2>
 
-        <div>
-          <%= form_tag("/search", method: "post") do %>
-            <%= text_field(:paul, :first_name) %>
-            <%= text_field(:paul, :last_name) %>
-            <%= text_field(:paul, :user_name) %>
-            <%= text_field(:paul, :email) %>
-
-          <% end %>
-
-        </div>
         <hr />
         <table class="table">
 
           <% @categories.each do | category | %>
             <tr>
               <td><%= category.name %></td>
+              <td></td>
             </tr>
+            <% category.sub_categories.each do | sub_category | %>
+              <tr>
+                <td></td>
+                <td><%= sub_category.name %></td>
+              </tr>
+            <% end %>
           <% end %>
 
         </table>
