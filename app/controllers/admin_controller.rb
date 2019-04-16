@@ -7,7 +7,7 @@ class AdminController < ApplicationController
     @roles = Role.all
     @users = User.all
     @paul = User.all.first
-    @categories = Category.all
+    @categories = Category.top_level_categories
   end
 
 end
