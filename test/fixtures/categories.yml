@@ -4,16 +4,10 @@ one:
   name: MyString
   description: MyString
   parent_category_id: 1
-  lvl: 1
-  lft: 1
-  rgt: 1
-  retired: 2019-04-16
+  retired: 2019-04-17
 
 two:
   name: MyString
   description: MyString
   parent_category_id: 1
-  lvl: 1
-  lft: 1
-  rgt: 1
-  retired: 2019-04-16
+  retired: 2019-04-17

@@ -13,6 +13,18 @@ faculty = Role.create(name: 'Faculty')
 
 paul = User.create(first_name: 'paul', last_name: 'ramirez', user_name: 'per245', email: 'pramirez@uwhealth.org', roles: [admin, reviewer])
 
-research_category = Category.create(name: 'Research', lvl:0)
-abstract_category = Category.create(name: 'Abstracts', lvl:1, parent_category: research_category)
-abstract_category = Category.create(name: 'Published Peer-Reviewed Manuscripts', lvl:1, parent_category: research_category)
+research_category = Category.create(name: 'Research', parent_category: nil)
+abstract_category = Category.create(name: 'Abstracts', parent_category: research_category)
+published_peer_reviewed_manu = Category.create(name: 'Published Peer-Reviewed Manuscripts', parent_category: research_category)
+
+=begin
+category:references
+value:string
+label_text:string
+name:string
+helper_text:string
+required:boolean
+order:integer
+is_text_area:boolean
+has_checkboxes:references
+=end
