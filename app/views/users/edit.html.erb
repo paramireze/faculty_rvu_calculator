@@ -1,14 +1,7 @@
-<div class="container">
-  <div class="page-header" id="banner">
-    <div class="row">
-      <div class="col-lg-8">
-        <h1>Editing User</h1>
-        <hr />
-        <%= render 'form', user: @user, roles: @roles %>
 
-        <%= link_to 'Show', @user %> |
-        <%= link_to 'Back', users_path %>
-      </div>
-    </div>
-  </div>
-</div>
+<h1>Editing User</h1>
+<hr />
+<%= render 'form', user: @user, roles: @roles %>
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>
