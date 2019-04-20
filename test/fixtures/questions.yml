@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: one
+  label_text: MyString
+  name: MyString
+  helper_text: MyString
+  required: false
+  order: 1
+  value: MyString
+  has_checkboxes: one
+  is_text_area: false
+
+two:
+  category: two
+  label_text: MyString
+  name: MyString
+  helper_text: MyString
+  required: false
+  order: 1
+  value: MyString
+  has_checkboxes: two
+  is_text_area: false

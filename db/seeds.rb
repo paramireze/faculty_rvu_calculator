@@ -17,14 +17,17 @@ research_category = Category.create(name: 'Research', parent_category: nil)
 abstract_category = Category.create(name: 'Abstracts', parent_category: research_category)
 published_peer_reviewed_manu = Category.create(name: 'Published Peer-Reviewed Manuscripts', parent_category: research_category)
 
+abstract_data_question = Question.create(category: abstract_category, label_text: 'Abstract Data', name: 'abstractData', helper_text: 'this is helper text', required: true, order: 1, is_text_area: true)
+published_peer_reviewed_manu = Question.create(category: published_peer_reviewed_manu, label_text: 'Published Data', name: 'publishedData', helper_text: 'this is helper text', required: true, order: 1, is_text_area: true)
+
 =begin
 category:references
-value:string
 label_text:string
 name:string
 helper_text:string
 required:boolean
 order:integer
-is_text_area:boolean
+value:string
 has_checkboxes:references
+is_text_area:boolean
 =end
