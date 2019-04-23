@@ -7,17 +7,19 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag "bootstrap" %>
-    <%= stylesheet_link_tag    'custom.min', media: 'all' %>
+    <%= stylesheet_link_tag "uw-style" %>
   </head>
 
   <body>
 
     <%= render 'layouts/header' %>
 
-    <div class="container">
-    <%= yield %>
-    </div>
+    <!-- main content -->
+    <main id="main">
+      <div class="uw-row">
+        <%= yield %>
+      </div>
+    </main>
 
     <%= render 'layouts/footer' %>
 

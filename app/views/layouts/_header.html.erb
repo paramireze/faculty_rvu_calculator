@@ -1,18 +1,69 @@
-<div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
-  <div class="container">
-    <a href="../" class="navbar-brand">RVU Calculator</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <%= link_to "Categories", {:controller => :categories}, { class: "nav-link"} %>
+<!-- UW navbar -->
+<div class="uw-global-bar">
+  <a class="uw-global-name-link" href="http://www.wisc.edu"><i class="fa fa-graduation-cap"></i> U<span>niversity <span class="uw-of">of</span> </span>W<span>isconsin</span>–Madison</a>
+</div>
+
+<header id="branding" class="uw-header uw-has-search">
+  <div class="uw-header-container">
+    <div class="uw-header-crest-title">
+      <div class="uw-header-crest">
+        <a href="http://www.wisc.edu"><%= image_tag("uw-crest.svg") %></a>
+      </div>
+      <div class="uw-title-tagline">
+        <h1 id="site-title" class="uw-site-title">
+          <a href="" rel="home">DEPARTMENT OF RADIOLOGY</a>
+        </h1>
+        <div id="site-description" class="uw-site-tagline">School of Medicine and Public Health</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<button class="uw-mobile-menu-button-bar uw-mobile-menu-button-bar-reversed uw-is-closed " data-menu="uw-top-menus" aria-label="Open menu" aria-expanded="false" aria-controls="uw-top-menus">Menu<svg aria-hidden="true" focusable="false"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#uw-symbol-menu"></use></svg><svg aria-hidden="true" focusable="false"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#uw-symbol-close"></use></svg></button>
+
+<!-- Main and secondary nav menus -->
+<div id="uw-top-menus" class="uw-is-visible uw-horizontal" aria-hidden="false">
+  <div class="uw-main-nav">
+    <nav class="uw-nav-menu uw-nav-menu-reverse" aria-label="Main Menu">
+      <ul id="uw-main-nav">
+        <li>
+          <%= link_to "Users", { :controller => :users} %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Users", {:controller => :users}, { class: "nav-link"} %>
+        <li>
+          <%= link_to "Categories", { :controller => :categories} %>
+        </li>
+        <li>
+          <%= link_to "Admin", { :controller => :admin} %>
         </li>
       </ul>
-    </div>
+    </nav>
+  </div>
+  <div class="uw-secondary-nav">
+    <nav class="uw-nav-menu uw-nav-menu-secondary" aria-label="Secondary Menu">
+      <ul>
+        <li id="menu-news" class="uw-dropdown">
+          <a href="http://news.wisc.edu" aria-haspopup="true" aria-expanded="false">
+            News<svg aria-hidden="true" class="uw-caret" focusable="false"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#uw-symbol-caret-down"></use></svg><svg aria-hidden="true" class="uw-caret" focusable="false"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#uw-symbol-caret-up"></use></svg>
+          </a>
+          <ul aria-hidden="true" aria-label="News submenu" class="uw-child-menu">
+            <li>
+              <a href="http://localhost:8001/about/">About</a>
+            </li>
+            <li>
+              <a href="http://localhost:8001/contact-us/our-location/">Our Location</a>
+            </li>
+            <li>
+              <a href="http://localhost:8001/news/">News</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="http://today.wisc.edu">Calendar</a>
+        </li>
+        <li>
+          <a href="http://map.wisc.edu">Map</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </div>
