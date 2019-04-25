@@ -36,3 +36,10 @@ docker-compose run web rails db:drop
 docker-compose run web rails destroy model Category
 docker-compose run web rails destroy model Question
 ```
+
+## Quick lookup for links to controller methods
+``` 
+<%= link_to 'Show', category %>
+<%= link_to 'Edit', edit_category_path(category) %>
+<%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %>
+```
